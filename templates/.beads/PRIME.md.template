@@ -1,0 +1,92 @@
+# Beads Workflow Context - {{PROJECT_NAME}}
+
+> **Context Recovery**: This is auto-injected on SessionStart and PreCompact
+
+## YOUR MISSION: {{MISSION_TITLE}}
+
+{{MISSION_DESCRIPTION}}
+
+## WORKFLOW (Follow Exactly)
+
+```bash
+# 0. HEARTBEAT: Identify yourself (run once at start)
+export AGENT_NAME="{{AGENT_PREFIX}}-1"
+export SESSION_NAME="{{SESSION_NAME}}"
+export PANE_NUM="2"
+export ITEMS_DONE=0
+
+# 1. FIRST: Get procedural rules from CASS Memory (if using cm)
+cm context "{{CONTEXT_QUERY}}" --json
+
+# 2. Find ready work
+bd ready --label={{PRIMARY_LABEL}} --json
+
+# 3. Claim ONE bead ATOMICALLY (fails fast if already claimed)
+bd update <bead-id> --claim
+# If claim fails, pick a DIFFERENT bead and retry
+{{WORKFLOW_DIR}}/scripts/heartbeat.sh "$AGENT_NAME" "$SESSION_NAME" "$PANE_NUM" "<bead-id>" "$ITEMS_DONE"
+
+# 4. Get the bead details
+bd show <bead-id>
+
+# 5. Read format instructions
+{{FORMAT_INSTRUCTIONS}}
+
+# 6. Research (if needed)
+{{RESEARCH_INSTRUCTIONS}}
+
+# 7. Do the work
+{{WORK_INSTRUCTIONS}}
+
+# 8. Close the bead and update heartbeat
+bd close <bead-id> --reason="{{COMPLETION_REASON}}"
+ITEMS_DONE=$((ITEMS_DONE + 1))
+{{WORKFLOW_DIR}}/scripts/heartbeat.sh "$AGENT_NAME" "$SESSION_NAME" "$PANE_NUM" "null" "$ITEMS_DONE"
+
+# 9. LOOP: Go back to step 2 until no more ready beads
+```
+
+## HEARTBEAT (Important for Monitoring)
+
+Send heartbeats so the monitor knows you're alive:
+```bash
+# When claiming a bead:
+{{WORKFLOW_DIR}}/scripts/heartbeat.sh "agent-name" "session" "pane" "bead-id" "items_completed"
+
+# When idle/between beads:
+{{WORKFLOW_DIR}}/scripts/heartbeat.sh "agent-name" "session" "pane" "null" "items_completed"
+```
+
+The monitor checks `.heartbeats/` directory. If no heartbeat for 5 minutes, you're considered stuck.
+
+## KEY RULES
+
+{{KEY_RULES}}
+
+## OUTPUT FORMAT
+
+{{OUTPUT_FORMAT}}
+
+## FEEDBACK (During Work)
+
+When a rule from cm context helps:
+```javascript
+// [cass: helpful b-xxx] - this pattern worked well
+```
+
+When a rule causes problems:
+```javascript
+// [cass: harmful b-xxx] - this caused issues because...
+```
+
+## SESSION CLOSE PROTOCOL
+
+When no more beads are ready:
+```bash
+bd sync
+git add {{OUTPUT_DIR}}/
+git commit -m "{{COMMIT_MESSAGE_TEMPLATE}}"
+git push
+```
+
+Report: "COMPLETE - {{COMPLETION_REPORT_TEMPLATE}}"

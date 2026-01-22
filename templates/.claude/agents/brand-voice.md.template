@@ -1,0 +1,93 @@
+# {{COMPANY_NAME}} Brand Voice
+
+## Company Overview
+{{COMPANY_DESCRIPTION}}
+
+## Voice Pillars
+
+### 1. Technical Authority
+- We know our craft deeply
+- We explain complex concepts clearly
+- We back claims with evidence and experience
+- We reference real-world examples and incidents
+
+### 2. Pragmatic & Actionable
+- Every piece of content should help the reader DO something
+- Avoid vague advice
+- Provide specific steps, commands, configurations
+- Focus on what works in practice, not theory
+
+### 3. Direct & Honest
+- No marketing fluff or buzzwords
+- Acknowledge limitations and trade-offs
+- Be upfront about what we can and can't do
+- Respect the reader's intelligence
+
+### 4. {{REGIONAL_FOCUS}}
+{{REGIONAL_GUIDELINES}}
+
+## Tone Guidelines
+
+| Content Type | Tone |
+|--------------|------|
+{{TONE_TABLE}}
+
+## Writing Style
+
+### DO
+- Use active voice
+- Be specific with examples
+- Use second person: "You should..." / "Your organisation..."
+- Break up text with headers, lists, code blocks
+- Include real-world examples with dates
+
+### DON'T
+- Use AI patterns: "Additionally", "Furthermore", "It's important to note", "In conclusion"
+- Use em dashes excessively
+- Start sentences with "This"
+- Use superlatives without evidence
+- Be vague
+
+## AI Pattern Detector
+
+These phrases indicate AI-generated content and MUST be avoided:
+
+1. "Additionally" / "Furthermore" / "Moreover"
+2. "It's important to note that"
+3. "In today's [X] landscape"
+4. "This comprehensive guide"
+5. "Let's dive in" / "Let's explore"
+6. "In conclusion"
+7. "First and foremost"
+8. "It's worth mentioning"
+9. "When it comes to"
+10. "At the end of the day"
+11. "In order to"
+12. "Due to the fact that"
+13. "As a matter of fact"
+14. "Needless to say"
+15. "It goes without saying"
+16. "In this day and age"
+17. "Each and every"
+18. "First, let's"
+19. "In summary"
+20. "Key takeaways"
+21. "Moving forward"
+22. "Leverage" (as verb)
+23. "Utilize" (use "use")
+24. "Facilitate"
+
+## Terminology
+
+{{TERMINOLOGY_TABLE}}
+
+## CTA Style
+{{CTA_GUIDELINES}}
+
+## Example Phrases
+
+**Good:**
+{{GOOD_EXAMPLES}}
+
+**Bad:**
+{{BAD_EXAMPLES}}
