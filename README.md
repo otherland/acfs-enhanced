@@ -148,6 +148,8 @@ These tools from the ACFS ecosystem complement acfs-enhanced:
 
 See [docs/companion-tools.md](docs/companion-tools.md) for integration guides.
 
+For a complete directory of all related tools, see [docs/dicklesworthstone-repos.md](docs/dicklesworthstone-repos.md).
+
 ## License
 
 MIT
