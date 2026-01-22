@@ -138,6 +138,8 @@ These tools from the ACFS ecosystem complement acfs-enhanced:
 
 | Tool | Purpose | Priority |
 |------|---------|----------|
+| **[mcp_agent_mail](https://github.com/Dicklesworthstone/mcp_agent_mail)** | Agent messaging & file reservations | High - true multi-agent coordination |
+| **[flywheel_connectors](https://github.com/Dicklesworthstone/flywheel_connectors)** | Secure distributed mesh protocol | High - multi-machine deployments |
 | **[process_triage](https://github.com/Dicklesworthstone/process_triage)** | Bayesian stuck process detection | High - smarter than heartbeat timeouts |
 | **[coding_agent_usage_tracker](https://github.com/Dicklesworthstone/coding_agent_usage_tracker)** | Multi-provider cost monitoring | High - track swarm costs |
 | **[wezterm_automata](https://github.com/Dicklesworthstone/wezterm_automata)** | Terminal hypervisor with pattern triggers | Medium - alternative to NTM |
