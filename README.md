@@ -132,6 +132,20 @@ echo "Follow PRIME.md" | ntm send your-project --cc=""
 - [PRIME Template](examples/PRIME-seo-example.md) - Complete PRIME.md example
 - [Brand Voice](examples/brand-voice-cybersecurity.md) - Output quality enforcement
 
+## Companion Tools
+
+These tools from the ACFS ecosystem complement acfs-enhanced:
+
+| Tool | Purpose | Priority |
+|------|---------|----------|
+| **[process_triage](https://github.com/Dicklesworthstone/process_triage)** | Bayesian stuck process detection | High - smarter than heartbeat timeouts |
+| **[coding_agent_usage_tracker](https://github.com/Dicklesworthstone/coding_agent_usage_tracker)** | Multi-provider cost monitoring | High - track swarm costs |
+| **[wezterm_automata](https://github.com/Dicklesworthstone/wezterm_automata)** | Terminal hypervisor with pattern triggers | Medium - alternative to NTM |
+| **[meta_skill](https://github.com/Dicklesworthstone/meta_skill)** | Skill/workflow sharing platform | Medium - distribute PRIME templates |
+| **[rano](https://github.com/Dicklesworthstone/rano)** | Network observer for AI CLIs | Medium - debug API issues |
+
+See [docs/companion-tools.md](docs/companion-tools.md) for integration guides.
+
 ## License
 
 MIT
