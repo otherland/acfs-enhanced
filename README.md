@@ -150,6 +150,18 @@ See [docs/companion-tools.md](docs/companion-tools.md) for integration guides.
 
 For a complete directory of all related tools, see [docs/dicklesworthstone-repos.md](docs/dicklesworthstone-repos.md).
 
+## Benchmarking & Performance
+
+We measure acfs-enhanced performance using SWE-bench Lite (300 real GitHub issues):
+
+- **Baseline**: acfs-enhanced vs vanilla Claude Code
+- **Primary metric**: Task success rate (% issues resolved correctly)
+- **Tool evaluation**: Incremental testing of mcp_agent_mail, CASS, beads_triage, etc.
+
+See [docs/BENCHMARK_PLAN.md](docs/BENCHMARK_PLAN.md) for the complete benchmarking strategy.
+
+**Goal**: Data-driven optimization of agent workflows and tool integrations.
+
 ## License
 
 MIT
