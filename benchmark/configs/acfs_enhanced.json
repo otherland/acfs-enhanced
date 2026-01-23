@@ -1,0 +1,27 @@
+{
+  "name": "acfs_enhanced",
+  "description": "acfs-enhanced with PRIME templates and workflow optimizations",
+  "features": {
+    "prime_injection": true,
+    "heartbeat_monitoring": true,
+    "atomic_claiming": true,
+    "brand_voice_enforcement": true,
+    "recovery_scripts": true
+  },
+  "prime_config": {
+    "template_path": "../templates/.beads/PRIME.md.template",
+    "inject_on_start": true,
+    "inject_before_compaction": true
+  },
+  "agent_config": {
+    "model": "claude-sonnet-4-5",
+    "max_tokens": 8192,
+    "temperature": 0.0
+  },
+  "workflow": {
+    "require_test_verification": true,
+    "enforce_minimal_changes": true,
+    "require_error_handling": true
+  },
+  "notes": "Full acfs-enhanced stack with PRIME templates for consistency and workflow discipline."
+}

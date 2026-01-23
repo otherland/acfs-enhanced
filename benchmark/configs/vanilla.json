@@ -1,0 +1,17 @@
+{
+  "name": "vanilla",
+  "description": "Stock Claude Code with no modifications",
+  "features": {
+    "prime_injection": false,
+    "heartbeat_monitoring": false,
+    "atomic_claiming": false,
+    "brand_voice_enforcement": false,
+    "recovery_scripts": false
+  },
+  "agent_config": {
+    "model": "claude-sonnet-4-5",
+    "max_tokens": 8192,
+    "temperature": 0.0
+  },
+  "notes": "Baseline configuration for comparison. No workflow optimizations applied."
+}

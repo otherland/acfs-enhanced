@@ -1,0 +1,32 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.python-version
+
+# SWE-bench
+swe-bench/
+*.jsonl
+results/
+transcripts/
+
+# Logs
+*.log
+benchmark.log
+
+# Temp files
+/tmp/
+*.tmp
+swebench_*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
