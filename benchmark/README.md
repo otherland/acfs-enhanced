@@ -1,8 +1,41 @@
 # ACFS Benchmark System
 
-Automated benchmark system for measuring acfs-enhanced performance improvements using SWE-bench Lite.
+Measure acfs-enhanced performance improvements using SWE-bench Lite tasks.
 
-## Quick Start
+**Two approaches:**
+1. **Manual Testing** (Recommended) - Solve tasks yourself with CASS logging
+2. **Automated Testing** (Future) - Fully automated agent evaluation
+
+## Manual Testing (Recommended)
+
+**Best for:** Getting real data quickly, understanding what actually helps
+
+See **[QUICKSTART.md](QUICKSTART.md)** and **[MANUAL_TESTING.md](MANUAL_TESTING.md)** for complete guide.
+
+### Quick Start (Manual)
+
+```bash
+# 1. Select test tasks
+python select_tasks.py
+
+# 2. Test one task (vanilla vs acfs-enhanced)
+# Follow QUICKSTART.md
+
+# 3. After testing 14 tasks, analyze results
+python analyze_manual_results.py \
+  --scorecard results/scorecard.csv \
+  --output results/report.md
+```
+
+**Time:** 1-2 days for baseline (14 tasks × 2 configs)
+**Cost:** Free (uses your Claude Code subscription)
+**Value:** Real feedback on what helps/hurts
+
+---
+
+## Automated Testing (Future)
+
+**Note:** The automated runner (below) is infrastructure for future use. Not needed for manual baseline.
 
 ### 1. Setup
 
